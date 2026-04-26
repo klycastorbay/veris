@@ -7,204 +7,68 @@
 
 <style>
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:#070707;color:#f2eadf;font-family:Arial,Helvetica,sans-serif}
+body{margin:0;background:#070707;color:#f2eadf;font-family:Arial}
 a{text-decoration:none;color:inherit}
 
-/* NAV */
 nav{
-position:sticky;top:0;z-index:99;
+position:sticky;top:0;
 padding:14px 5%;
-display:flex;align-items:center;justify-content:space-between;gap:20px;
-background:rgba(7,7,7,.94);
+background:#070707;
 border-bottom:1px solid #2b2722;
-backdrop-filter:blur(12px)
 }
-.logo{font-size:30px;letter-spacing:10px;font-weight:800}
-.logo span{display:block;font-size:8px;letter-spacing:4px;color:#bdb3a6}
-.menu{display:flex;gap:18px;flex-wrap:wrap}
-.menu a{font-size:13px;padding:10px 12px}
-.menu .goldbtn{border:1px solid #c8a25f;color:#e7c98d}
+
+.logo{font-size:26px;letter-spacing:8px;font-weight:bold}
+.menu{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+.menu a{font-size:12px;padding:8px 10px;border:1px solid #333}
+.gold{border:1px solid #c8a25f;color:#c8a25f}
 
 /* HERO */
 .hero{
-padding:70px 5%;
-display:grid;grid-template-columns:.9fr 1.3fr;gap:40px;align-items:center;
-background:radial-gradient(circle at 75% 35%,#51483d,#070707 70%)
-}
-h1{font-size:64px;line-height:1.02;margin:0 0 20px}
-.hero p{font-size:20px;color:#ded5c9;line-height:1.5}
-.gold{color:#c8a25f;font-weight:800;letter-spacing:2px}
-.btn{display:inline-block;margin-top:24px;border:1px solid #c8a25f;color:#e7c98d;padding:15px 28px;font-weight:800}
-
-/* HERO IMAGE */
-.visual{
-height:440px;position:relative;overflow:hidden;border:1px solid #2c2822;
-background:linear-gradient(145deg,#29231d,#0c0b0a 70%);
-box-shadow:0 35px 80px rgba(0,0,0,.55)
-}
-.visual:before{
-content:"";position:absolute;inset:0;
-background:radial-gradient(circle at 70% 30%,rgba(200,162,95,.35),transparent 45%)
-}
-.basin{
-position:absolute;left:14%;right:10%;bottom:90px;height:190px;
-background:linear-gradient(180deg,#e6dccb,#9b8f7f 55%,#554d44);
-border-radius:50%;
-box-shadow:0 34px 55px rgba(0,0,0,.55);
-border:8px solid #f0e5d4
-}
-.basin:after{
-content:"";position:absolute;left:22%;right:22%;top:30%;height:34%;
-background:#34302b;border-radius:50%;opacity:.7
-}
-
-/* FEATURES */
-.features{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-background:#101010;
-border-top:1px solid #222;
-border-bottom:1px solid #222
-}
-.feature{
+padding:50px 5%;
 text-align:center;
-padding:28px 15px;
-border-right:1px solid #333
 }
-.feature:last-child{border-right:0}
-.feature b{color:#e8d0a8}
-.feature p{color:#bdb3a6;font-size:13px}
+
+.hero img{
+width:100%;
+max-height:400px;
+object-fit:cover;
+margin-top:20px;
+border:1px solid #333;
+}
 
 /* SECTION */
-.section{padding:64px 5%}
-.head{
-display:grid;
-grid-template-columns:300px 1fr;
-gap:35px;
-align-items:end;
-margin-bottom:28px
-}
-h2{font-size:34px;line-height:1.1;margin:0}
-.section p{color:#bdb3a6;line-height:1.6}
+.section{padding:40px 5%}
+h1{font-size:48px}
+h2{font-size:30px}
+p{color:#ccc}
 
 /* PRODUCT */
-.catalog{
+.grid{
 display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:16px
+grid-template-columns:repeat(2,1fr);
+gap:10px;
 }
+
 .card{
 background:#111;
-border:1px solid #2d2924
-}
-.mini{
-height:190px;
-position:relative;
-background:linear-gradient(145deg,#342d26,#111);
-overflow:hidden
-}
-.mini:before{
-content:"";
-position:absolute;
-left:12%;right:12%;top:38%;height:40%;
-background:linear-gradient(180deg,#e6dccb,#756c60);
-border:6px solid #f0e5d4;
-box-shadow:0 22px 35px rgba(0,0,0,.45)
-}
-.rect:before{border-radius:36px}
-.round:before{border-radius:50%;left:18%;right:18%}
-.oval:before{border-radius:50%}
-.square:before{border-radius:12px;left:20%;right:20%}
-.card .text{padding:16px}
-.card h3{margin:0 0 6px}
-.card small{color:#cfc7bd}
-.card a{
-display:inline-block;
-margin-top:12px;
-color:#c8a25f;
-font-size:12px;
-border-bottom:1px solid #c8a25f
+border:1px solid #333;
 }
 
-/* CTA */
-.cta{
-padding:42px 5%;
-display:grid;
-grid-template-columns:1fr 280px;
-gap:28px;
-align-items:center;
-background:#0d0d0d;
-border-top:1px solid #222
-}
-.contact{
-background:#c8a25f;
-color:white;
-text-align:center;
-padding:16px 22px;
-font-weight:800
+.card img{
+width:100%;
+height:150px;
+object-fit:cover;
 }
 
-/* FOOTER */
-footer{
-padding:26px 5%;
-color:#81786e;
-font-size:13px;
-border-top:1px solid #171717
-}
+.card div{padding:10px}
 
-/* 📱 MOBILE（已修好） */
+/* MOBILE */
 @media(max-width:900px){
 
-nav{display:block}
+h1{font-size:28px}
+h2{font-size:22px}
 
-.logo{
-font-size:22px;
-letter-spacing:6px;
-margin-bottom:10px;
-}
-
-.menu{
-gap:8px;
-}
-.menu a{
-font-size:12px;
-padding:8px 10px;
-border:1px solid #2b2722;
-}
-
-/* layout */
-.hero,.features,.head,.catalog,.cta{
-grid-template-columns:1fr;
-}
-
-/* ⭐ 關鍵：標題全部縮小 */
-h1{
-font-size:30px;
-line-height:1.2;
-}
-
-h2{
-font-size:24px;
-line-height:1.3;
-}
-
-.hero p{font-size:16px}
-.section p{font-size:14px}
-
-/* spacing */
-.hero{padding:36px 5%}
-.visual{height:280px}
-
-/* product */
-.catalog{grid-template-columns:1fr}
-
-/* feature */
-.feature{
-border-right:0;
-border-bottom:1px solid #333;
-padding:20px 10px;
-}
+.grid{grid-template-columns:1fr}
 
 }
 </style>
@@ -213,61 +77,54 @@ padding:20px 10px;
 <body>
 
 <nav>
-<div class="logo">VELITH<span>ARCHITECTURAL MINERAL SYSTEM</span></div>
+<div class="logo">VELITH</div>
 <div class="menu">
-<a href="#home">HOME</a>
-<a href="#product">PRODUCT</a>
-<a href="#technology">TECHNOLOGY</a>
-<a class="goldbtn" href="#contact">REQUEST INFO</a>
+<a>HOME</a>
+<a>PRODUCT</a>
+<a>TECH</a>
+<a class="gold">CONTACT</a>
 </div>
 </nav>
 
-<header id="home" class="hero">
-<div>
-<h1>ENGINEERED<br>TO ELEVATE</h1>
-<p>VELITH is a high-performance mineral composite system for premium washbasins.</p>
-<p class="gold">FOR STUDIOS & OEM MANUFACTURERS</p>
-<a class="btn" href="#contact">REQUEST SAMPLE →</a>
-</div>
-<div class="visual"><div class="basin"></div></div>
-</header>
+<div class="hero">
+<h1>ENGINEERED TO ELEVATE</h1>
+<p>Premium mineral washbasin system</p>
 
-<section id="technology" class="features">
-<div class="feature"><b>NON-SHRINK</b><p>Stable performance</p></div>
-<div class="feature"><b>HIGH STRENGTH</b><p>Thin-wall casting</p></div>
-<div class="feature"><b>AIR CURING</b><p>No water curing</p></div>
-<div class="feature"><b>DENSE SURFACE</b><p>Premium finish</p></div>
-<div class="feature"><b>OEM READY</b><p>Production system</p></div>
-</section>
-
-<section id="product" class="section">
-<div class="head">
-<div>
-<p class="gold">ONE PRODUCT FOCUS</p>
-<h2>WASHBASINS<br>THAT DEFINE SPACE</h2>
-</div>
-<p>
-Designed for studios and OEM manufacturers who need fewer pinholes, fewer cracks, and more consistent premium production.
-</p>
+<img src="https://images.unsplash.com/photo-1582582621959-48d27397dc69?q=80&w=1400" />
 </div>
 
-<div class="catalog">
-<div class="card"><div class="mini rect"></div><div class="text"><h3>RECTA</h3><small>Rectangular basin</small></div></div>
-<div class="card"><div class="mini round"></div><div class="text"><h3>CIRCA</h3><small>Round basin</small></div></div>
-<div class="card"><div class="mini oval"></div><div class="text"><h3>OVALA</h3><small>Oval basin</small></div></div>
-<div class="card"><div class="mini square"></div><div class="text"><h3>QUADRA</h3><small>Square basin</small></div></div>
-</div>
-</section>
+<div class="section">
+<h2>WASHBASINS</h2>
 
-<section id="contact" class="cta">
-<div>
-<h2>LET’S BUILD SOMETHING EXCEPTIONAL TOGETHER.</h2>
-<p>Contact us for OEM collaboration or samples.</p>
-</div>
-<a class="contact" href="mailto:your@email.com">CONTACT US</a>
-</section>
+<div class="grid">
 
-<footer>© 2026 VELITH / Triaxis</footer>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=800"/>
+<div>RECTA</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1595514535415-dae2c1e3a9d6?q=80&w=800"/>
+<div>CIRCA</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800"/>
+<div>OVALA</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?q=80&w=800"/>
+<div>QUADRA</div>
+</div>
+
+</div>
+</div>
+
+<div class="section">
+<h2>CONTACT</h2>
+<p>your@email.com</p>
+</div>
 
 </body>
 </html>
